@@ -106,16 +106,16 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%ld",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease - %ld",21};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"1",1};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease2 - %ld",22};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease2 - %@",21};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease2 - %ld",22};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%ld",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease - %ld",21};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"1",1};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease2 - %ld",22};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease2 - %@",21};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"testAutorelease2 - %ld",22};
 
 
 
@@ -97746,17 +97746,18 @@ struct ITARC_IMPL {
 /* @end */
 
 
+
 // @implementation ITARC
 
 
 static instancetype _I_ITARC_init(ITARC * self, SEL _cmd) {
     self = ((ITARC *(*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("ITARC"))}, sel_registerName("init"));
     if (self) {
-        ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("testStrong"));
-        ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("testWeak"));
 
 
-        ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("testAutorelease2"));
+
+        ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("testAutorelease"));
+
     }
     return self;
 }
@@ -97770,7 +97771,7 @@ static void _I_ITARC_testStrong(ITARC * self, SEL _cmd) {
     NSObject *o = ((NSObject *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("new"));
     NSObject *o1 = o;
     o = __null;
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_0, o1);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_0, o1);
 }
 
 
@@ -97782,7 +97783,7 @@ static void _I_ITARC_testWeak(ITARC * self, SEL _cmd) {
 
     __attribute__((objc_ownership(weak))) NSObject *o1 = o;
     o = __null;
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_1, o1);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_1, o1);
 }
 
 
@@ -97796,12 +97797,14 @@ static void _I_ITARC_testUnsafeUnRetained(ITARC * self, SEL _cmd) {
     __attribute__((objc_ownership(none))) NSMutableArray *o1 = __null;
     {
         NSMutableArray *o = ((NSMutableArray *(*)(id, SEL))(void *)objc_msgSend)((id)((NSMutableArray *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("alloc")), sel_registerName("init"));
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_2, CFGetRetainCount((__bridge CFTypeRef)o));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_2, CFGetRetainCount((__bridge CFTypeRef)o));
         o1 = o;
 
     }
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_3, o1);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_3, o1);
 }
+
+
 
 
 
@@ -97811,22 +97814,22 @@ static void _I_ITARC_testAutorelease(ITARC * self, SEL _cmd) {
     __attribute__((objc_ownership(none))) NSMutableArray *o1 = __null;
     {
         NSMutableArray *o = ((NSMutableArray * _Nonnull (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("array"));
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_4, CFGetRetainCount((__bridge CFTypeRef)o));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_4, CFGetRetainCount((__bridge CFTypeRef)o));
         o1 = o;
     }
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_5, o1);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_5, o1);
 }
 
 
 static void _I_ITARC_testAutorelease2(ITARC * self, SEL _cmd) {
     __attribute__((objc_ownership(none))) NSMutableArray *o1 = __null;
     {
-        NSMutableArray *o = ((NSMutableArray * _Nonnull (*)(id, SEL, ObjectType  _Nonnull __strong, ...))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("arrayWithObjects:"), (id _Nonnull)(NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_6, __null);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_7, CFGetRetainCount((__bridge CFTypeRef)o));
+        NSMutableArray *o = ((NSMutableArray * _Nonnull (*)(id, SEL, ObjectType  _Nonnull __strong, ...))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("arrayWithObjects:"), (id _Nonnull)(NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_6, __null);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_7, CFGetRetainCount((__bridge CFTypeRef)o));
         o1 = o;
     }
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_8, o1);
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_b8a202_mi_9, CFGetRetainCount((__bridge CFTypeRef)o1));
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_8, o1);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_0__c55l1tzx67q_rrqncbd0dsxm0000gn_T_ITARC_760d40_mi_9, CFGetRetainCount((__bridge CFTypeRef)o1));
 }
 
 // @end

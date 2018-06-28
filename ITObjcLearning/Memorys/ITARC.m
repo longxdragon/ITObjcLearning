@@ -11,14 +11,17 @@
 // https://segmentfault.com/a/1190000004943276
 @implementation ITARC
 
+extern uintptr_t _objc_rootRetainCount(id obj);
+extern void _objc_autoreleasePoolPrint(void);
+
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self testStrong];
-        [self testWeak];
+//        [self testStrong];
+//        [self testWeak];
 //        [self testUnsafeUnRetained];
 //        [self testAutorelease];
-        [self testAutorelease2];
+//        [self testAutorelease2];
     }
     return self;
 }
@@ -63,13 +66,21 @@
 }
 
 /**
- 同上
+ o 出了作用域，强指针释放，内存有没有被释放？
+ 初步猜测：runtime 对 autorelease 返回值做了优化策略，返回值的快速释放
  */
 - (void)testAutorelease {
-    __unsafe_unretained NSMutableArray *o1 = nil;
+    id __unsafe_unretained o1;
     {
-        NSMutableArray *o = [NSMutableArray array];
-        NSLog(@"testAutorelease - %ld", CFGetRetainCount((__bridge CFTypeRef)o));
+        // arrary 方法中，会执行 objc_autoreleaseReturnValue，返回被注册到 autoreleasepool 中的对象
+        // o 对象是 __strong 修饰的，赋值的时候，会自动执行 objc_retainAutoreleasedReturnValue
+        // 理论上，o 对象指向的内存的 retainCount = 2
+        //
+        // 实际测试，retainCount = 1
+        // https://blog.sunnyxx.com/2014/10/15/behind-autorelease/
+        // runtime 对 autorelease 返回值做了优化策略
+        id o = [NSMutableArray array];
+        NSLog(@"%ld", _objc_rootRetainCount(o));
         o1 = o;
     }
     NSLog(@"%@", o1);
@@ -83,7 +94,6 @@
         o1 = o;
     }
     NSLog(@"testAutorelease2 - %@", o1);
-    NSLog(@"testAutorelease2 - %ld", CFGetRetainCount((__bridge CFTypeRef)o1));
 }
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QxC-nL-Gr1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oa0-xq-cRO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,44 +11,35 @@
     </dependencies>
     <scenes>
         <!--ITObjcLearning-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Jqz-Na-e1e">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="F1r-bX-VL5" customClass="ITHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="k8Z-Kf-SG9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i91-CE-phH">
-                                <rect key="frame" x="130" y="114" width="115" height="30"/>
-                                <state key="normal" title="Test Autorelease"/>
-                                <connections>
-                                    <segue destination="lQq-Lt-Ky2" kind="show" id="KZ1-Tu-tY7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="i91-CE-phH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4nb-BK-v7O"/>
-                            <constraint firstItem="i91-CE-phH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="vJm-Vv-k4j"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="ITObjcLearning" id="mRN-1e-SvI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="F1r-bX-VL5" id="F4U-Yp-b3k"/>
+                            <outlet property="delegate" destination="F1r-bX-VL5" id="PFf-9s-DDY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ITObjcLearning" id="fOL-67-32v"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zks-eH-jxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="776"/>
+            <point key="canvasLocation" x="1918" y="775"/>
         </scene>
         <!--Auto Release View Controller-->
         <scene sceneID="HP1-Ph-eQF">
             <objects>
-                <viewController id="lQq-Lt-Ky2" customClass="ITAutoReleaseViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1kK-J8-SXA">
+                <viewController storyboardIdentifier="ITAutoReleaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lQq-Lt-Ky2" customClass="ITAutoReleaseViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ITAutoReleaseViewController" id="1kK-J8-SXA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgt-l1-EsR">
-                                <rect key="frame" x="88" y="114" width="198" height="30"/>
+                                <rect key="frame" x="88" y="70" width="198" height="30"/>
                                 <state key="normal" title="Test Animation With Runloop"/>
                                 <connections>
                                     <action selector="testAnimationWithRunloop:" destination="lQq-Lt-Ky2" eventType="touchUpInside" id="W2v-ax-iVH"/>
@@ -65,25 +56,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EH-G6-XdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1945" y="775"/>
+            <point key="canvasLocation" x="2663" y="775"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Td4-cZ-ais">
+        <scene sceneID="HHq-RX-hiH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QxC-nL-Gr1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oa0-xq-cRO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jFx-Mi-PIo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1C-Fa-a9M">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="98b-BV-ZQn"/>
+                        <segue destination="F1r-bX-VL5" kind="relationship" relationship="rootViewController" id="CR2-9V-vke"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CGe-qv-CqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJm-Cx-Fzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357.60000000000002" y="775.86206896551732"/>
+            <point key="canvasLocation" x="1125.5999999999999" y="774.96251874062978"/>
         </scene>
     </scenes>
 </document>

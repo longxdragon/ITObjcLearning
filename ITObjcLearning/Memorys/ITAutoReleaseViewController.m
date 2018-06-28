@@ -26,11 +26,19 @@ __weak id refrence = nil;
     // 返回的是 autorelease 对象
     NSString *str = [NSString stringWithFormat:@"dragonxulong"];
     NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)str));
-    refrence = str;
-    NSLog(@"%@", refrence);
+//    refrence = str;
+//    NSLog(@"%@", refrence);
     // 出了作用域后，并不是立马释放
     
     // 场景 2
+//    {
+//        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
+//        refrence = str;
+//    }
+//    NSLog(@"%@", refrence);
+    
+    
+    // 场景 3
     // 手动干预 autorelease 对象
     // 等同于：
     // void *context = objc_autoreleasePoolPush();
@@ -41,21 +49,19 @@ __weak id refrence = nil;
     // 双向链表
     // 跟线程一一对应，保存着当前的线程对象
     //
-//    @autoreleasepool {
-//        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
-//        refrence = str;
-//    }
-//    NSLog(@"%@", refrence);
+    @autoreleasepool {
+        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
+        refrence = str;
+    }
+    NSLog(@"%@", refrence);
     
-    // 场景 3
+    // 场景 4
 //        NSString *str2 = nil;
 //        @autoreleasepool {
 //            str2 = [NSString stringWithFormat:@"dragonxulong"];
 //            refrence = str2;
 //        }
 //        NSLog(@"%@", refrence);
-    
-    NSLog(@"currentRunLoop:%@", [[NSRunLoop currentRunLoop] currentMode]);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,7 +71,6 @@ __weak id refrence = nil;
     // 此时 自动释放池已然存在，runloop 还未迭代结束
     // 由于 ViewController 在 loadView 之后便 add 到了 window 层级上，所以 viewDidLoad 和 viewWillAppear 是在同一个 runloop 调用的
     NSLog(@"viewWillAppear : %@", refrence);
-    NSLog(@"currentRunLoop:%@", [[NSRunLoop currentRunLoop] currentMode]);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -83,7 +88,6 @@ __weak id refrence = nil;
     // 注意： animated = NO，viewWillAppear、viewDidAppear 就会在同一个 Runloop 周期内
     //
     NSLog(@"viewDidAppear : %@", refrence);
-    NSLog(@"currentRunLoop:%@", [[NSRunLoop currentRunLoop] currentMode]);
 }
 
 #pragma mark - 测试 CoreAnimation 与 Runloop 的关系

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621EA1B020E09305009FD28D /* ITHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 621EA1AF20E09305009FD28D /* ITHomeViewController.m */; };
 		62AC4A3920DFEAF300C8AEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AC4A3820DFEAF300C8AEBC /* AppDelegate.m */; };
-		62AC4A3C20DFEAF300C8AEBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AC4A3B20DFEAF300C8AEBC /* ViewController.m */; };
 		62AC4A3F20DFEAF300C8AEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AC4A3D20DFEAF300C8AEBC /* Main.storyboard */; };
 		62AC4A4120DFEAF500C8AEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62AC4A4020DFEAF500C8AEBC /* Assets.xcassets */; };
 		62AC4A4420DFEAF500C8AEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AC4A4220DFEAF500C8AEBC /* LaunchScreen.storyboard */; };
@@ -19,6 +19,7 @@
 		62AC4A7720DFEB3700C8AEBC /* ITString.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AC4A7120DFEB3700C8AEBC /* ITString.m */; };
 		62AC4A7820DFEB3700C8AEBC /* ITRetainCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AC4A7220DFEB3700C8AEBC /* ITRetainCount.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		62AC4A7920DFEB3700C8AEBC /* ITAutoReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AC4A7420DFEB3700C8AEBC /* ITAutoReleaseViewController.m */; };
+		62B2C50020E36CF200F94B05 /* ITMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B2C4FF20E36CF200F94B05 /* ITMutableArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		621EA1AE20E09305009FD28D /* ITHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITHomeViewController.h; sourceTree = "<group>"; };
+		621EA1AF20E09305009FD28D /* ITHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITHomeViewController.m; sourceTree = "<group>"; };
 		62AC4A3420DFEAF200C8AEBC /* ITObjcLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITObjcLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AC4A3720DFEAF300C8AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62AC4A3820DFEAF300C8AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		62AC4A3A20DFEAF300C8AEBC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		62AC4A3B20DFEAF300C8AEBC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		62AC4A3E20DFEAF300C8AEBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62AC4A4020DFEAF500C8AEBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62AC4A4320DFEAF500C8AEBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,8 @@
 		62AC4A7220DFEB3700C8AEBC /* ITRetainCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRetainCount.m; sourceTree = "<group>"; };
 		62AC4A7320DFEB3700C8AEBC /* ITARC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITARC.h; sourceTree = "<group>"; };
 		62AC4A7420DFEB3700C8AEBC /* ITAutoReleaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITAutoReleaseViewController.m; sourceTree = "<group>"; };
+		62B2C4FE20E36CF200F94B05 /* ITMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITMutableArray.h; sourceTree = "<group>"; };
+		62B2C4FF20E36CF200F94B05 /* ITMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITMutableArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +116,11 @@
 		62AC4A3620DFEAF200C8AEBC /* ITObjcLearning */ = {
 			isa = PBXGroup;
 			children = (
+				621EA1AE20E09305009FD28D /* ITHomeViewController.h */,
+				621EA1AF20E09305009FD28D /* ITHomeViewController.m */,
 				62AC4A6B20DFEB3700C8AEBC /* Memorys */,
 				62AC4A3720DFEAF300C8AEBC /* AppDelegate.h */,
 				62AC4A3820DFEAF300C8AEBC /* AppDelegate.m */,
-				62AC4A3A20DFEAF300C8AEBC /* ViewController.h */,
-				62AC4A3B20DFEAF300C8AEBC /* ViewController.m */,
 				62AC4A3D20DFEAF300C8AEBC /* Main.storyboard */,
 				62AC4A4020DFEAF500C8AEBC /* Assets.xcassets */,
 				62AC4A4220DFEAF500C8AEBC /* LaunchScreen.storyboard */,
@@ -156,6 +159,8 @@
 				62AC4A7220DFEB3700C8AEBC /* ITRetainCount.m */,
 				62AC4A6F20DFEB3700C8AEBC /* ITAutoReleaseViewController.h */,
 				62AC4A7420DFEB3700C8AEBC /* ITAutoReleaseViewController.m */,
+				62B2C4FE20E36CF200F94B05 /* ITMutableArray.h */,
+				62B2C4FF20E36CF200F94B05 /* ITMutableArray.m */,
 			);
 			path = Memorys;
 			sourceTree = "<group>";
@@ -290,11 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62AC4A3C20DFEAF300C8AEBC /* ViewController.m in Sources */,
 				62AC4A7820DFEB3700C8AEBC /* ITRetainCount.m in Sources */,
+				62B2C50020E36CF200F94B05 /* ITMutableArray.m in Sources */,
 				62AC4A7520DFEB3700C8AEBC /* ITARC.m in Sources */,
 				62AC4A4720DFEAF500C8AEBC /* main.m in Sources */,
 				62AC4A3920DFEAF300C8AEBC /* AppDelegate.m in Sources */,
+				621EA1B020E09305009FD28D /* ITHomeViewController.m in Sources */,
 				62AC4A7920DFEB3700C8AEBC /* ITAutoReleaseViewController.m in Sources */,
 				62AC4A7720DFEB3700C8AEBC /* ITString.m in Sources */,
 			);

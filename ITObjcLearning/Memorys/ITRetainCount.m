@@ -8,6 +8,13 @@
 
 #import "ITRetainCount.h"
 
+@interface ITRetainCount ()
+
+@property (nonatomic, retain) NSString *refrence1;
+@property (nonatomic, copy) NSString *refrence2;
+
+@end
+
 @implementation ITRetainCount
 
 - (instancetype)init {
@@ -15,6 +22,7 @@
     if (self) {
         [self testAutorelease];
         [self testAutoreleaseOurs];
+        [self testRetainCopy];
     }
     return self;
 }
@@ -25,17 +33,38 @@
     // array 类方法初始化对象时，把对象加入了自动释放池，由自动释放池管理对象
     // array = alloc + autorelease
     NSMutableArray *arr = [NSMutableArray array];
-    NSLog(@"retain count : %zd", [arr retainCount]);
-    // 所以就不需要 release， 如果调用了 release， 会出现多次释放闪退
+    NSLog(@"arr retain count : %zd", [arr retainCount]);
+    
+    // 此处不需要 release， 如果调用了 release， 会出现多次释放闪退
+    // 非自己管理的对象，不可以释放
     //[arr release];
     
     // 如果需要自己管理改对象生命周期，需要 retain 操作
     [arr retain];
-    NSLog(@"retain count : %zd", [arr retainCount]);
-
+    NSLog(@"arr retain count : %zd", [arr retainCount]);
+    
+    // stringWithFormat = alloc + autorelease
+    // retain count = 1
+    // 再次 retain 后，retain count + 1 = 2
+    NSString *str = [[NSString stringWithFormat:@"dragonxulong"] retain];
+    NSLog(@"str retain count : %zd", [str retainCount]);
+    
+    // Note:
+    // str 对象被 arr 强引用一次，retain count + 1 = 3
+    [arr addObject:str];
+    NSLog(@"str retain count : %zd", [str retainCount]);
+    
+    // str 对象被 arr 移除引用，retain count - 1 = 2
+    [arr removeAllObjects];
+    NSLog(@"str retain count : %zd", [str retainCount]);
+    
+    // str 不需要时，需要手动释放
+    [str release];
+    NSLog(@"str retain count : %zd", [str retainCount]);
+    
     // 不需要时，释放
     [arr release];
-    NSLog(@"retain count : %zd", [arr retainCount]);
+    NSLog(@"arr retain count : %zd", [arr retainCount]);
 }
 
 // NSAutoreleasePool 自己不创建的话
@@ -57,6 +86,15 @@
     }
 }
 
-
+- (void)testRetainCopy {
+    NSString *str = [NSString stringWithFormat:@"dragonxulong"];
+    // 赋值的时候会自动做一次 retain 操作
+    self.refrence1 = str;
+    NSLog(@"str retain count : %zd", [str retainCount]);
+    
+    // 赋值的时候会自动做一次 copy 操作
+    self.refrence2 = str;
+    NSLog(@"str retain count : %zd", [str retainCount]);
+}
 
 @end
