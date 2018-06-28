@@ -26,8 +26,8 @@ __weak id refrence = nil;
     // 返回的是 autorelease 对象
     NSString *str = [NSString stringWithFormat:@"dragonxulong"];
     NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)str));
-//    refrence = str;
-//    NSLog(@"%@", refrence);
+    refrence = str;
+    NSLog(@"%@", refrence);
     // 出了作用域后，并不是立马释放
     
     // 场景 2
@@ -49,11 +49,11 @@ __weak id refrence = nil;
     // 双向链表
     // 跟线程一一对应，保存着当前的线程对象
     //
-    @autoreleasepool {
-        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
-        refrence = str;
-    }
-    NSLog(@"%@", refrence);
+//    @autoreleasepool {
+//        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
+//        refrence = str;
+//    }
+//    NSLog(@"%@", refrence);
     
     // 场景 4
 //        NSString *str2 = nil;

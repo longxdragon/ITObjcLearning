@@ -56,7 +56,12 @@
         }
         
         if ([obj isKindOfClass:[UIViewController class]]) {
-            [self.navigationController pushViewController:obj animated:YES];
+            BOOL animated = YES;
+            if (dict[@"animate"]) {
+                animated = [dict[@"animate"] boolValue];
+            }
+            
+            [self.navigationController pushViewController:obj animated:animated];
         }
     }
 }
@@ -67,7 +72,8 @@
         [_list addObject:@{ @"name" : @"RetainCount", @"class" : @"ITRetainCount" }];
         [_list addObject:@{ @"name" : @"ARC", @"class" : @"ITARC" }];
         [_list addObject:@{ @"name" : @"String", @"class" : @"ITString" }];
-        [_list addObject:@{ @"name" : @"Autorelease", @"class" : @"ITAutoReleaseViewController", @"nib" : @(YES) }];
+        [_list addObject:@{ @"name" : @"Autorelease", @"class" : @"ITAutoReleaseViewController", @"nib" : @(YES), @"animate" : @(YES) }];
+        [_list addObject:@{ @"name" : @"Autorelease without animation", @"class" : @"ITAutoReleaseViewController", @"nib" : @(YES), @"animate" : @(NO) }];
         [_list addObject:@{ @"name" : @"ITMutableArray", @"class" : @"ITMutableArray" }];
     }
     return _list;
