@@ -21,7 +21,7 @@ extern void _objc_autoreleasePoolPrint(void);
 //        [self testWeak];
 //        [self testUnsafeUnRetained];
 //        [self testAutorelease];
-//        [self testAutorelease2];
+        [self testAutorelease2];
     }
     return self;
 }
