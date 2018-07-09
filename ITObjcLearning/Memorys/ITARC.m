@@ -9,6 +9,11 @@
 #import "ITARC.h"
 
 // https://segmentfault.com/a/1190000004943276
+/**
+ 1、ARC是编译器（时）特性，而不是运行时特性，更不是垃圾回收器(GC)，编译时插入相应的 retain release
+ 2、weak 的释放特性是基于 runtime 实现的
+ 3、runtime 也针对的内存管理做了优化，比如 autorelease 的快速释放机制。
+ */
 @implementation ITARC
 
 extern uintptr_t _objc_rootRetainCount(id obj);

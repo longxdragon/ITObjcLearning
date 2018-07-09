@@ -15,6 +15,16 @@
 
 @end
 
+/**
+ 引用计数如何存储：
+ 1、TaggedPointer对象，直接将指针值作为引用计数返回；
+ 2、当前设备是 64bit，并且使用 Objective-C 2.0，那么会使用其isa指针的一部分空间(extra_rc)来储存引用计数, retainCount = extra_rc + 1；
+ 3、否则，或者 extra_rc 储存不下了，runtime 就会使用一个散列表(RefcountMap)来管理引用计数；
+
+ 采用散列表管理引用计数的好处：
+ 1、对象用内存块的分配无需考虑内存块头部
+ 2、引用计数表各记录中存有内存地址，可从各个记录追溯到各对象的内存块
+ */
 @implementation ITRetainCount
 
 - (instancetype)init {
@@ -67,9 +77,11 @@
     NSLog(@"arr retain count : %zd", [arr retainCount]);
 }
 
-// NSAutoreleasePool 自己不创建的话
-// 当前 NSRunloop 会自动 Push 一个 autoreleasePool
-// 所有直接调用 autorelease 方法，是添加到当前 runloop 下的 autoreleasePool 中
+/**
+ NSAutoreleasePool 自己不创建的话
+ 当前 NSRunloop 会自动 Push 一个 autoreleasePool
+ 所有直接调用 autorelease 方法，是添加到当前 runloop 下的 autoreleasePool 中
+ */
 - (void)testAutoreleaseOurs {
     for (NSInteger i = 0; i < 10000; i++) {
         // 创建的自动释放池
