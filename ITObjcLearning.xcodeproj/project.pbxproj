@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		621EA1B020E09305009FD28D /* ITHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 621EA1AF20E09305009FD28D /* ITHomeViewController.m */; };
+		6230581E20F36CCE00A9EE55 /* ITCFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6230581D20F36CCE00A9EE55 /* ITCFoundation.m */; };
 		62AC4A3920DFEAF300C8AEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AC4A3820DFEAF300C8AEBC /* AppDelegate.m */; };
 		62AC4A3F20DFEAF300C8AEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AC4A3D20DFEAF300C8AEBC /* Main.storyboard */; };
 		62AC4A4120DFEAF500C8AEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62AC4A4020DFEAF500C8AEBC /* Assets.xcassets */; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		621EA1AE20E09305009FD28D /* ITHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITHomeViewController.h; sourceTree = "<group>"; };
 		621EA1AF20E09305009FD28D /* ITHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITHomeViewController.m; sourceTree = "<group>"; };
+		6230581C20F36CCE00A9EE55 /* ITCFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITCFoundation.h; sourceTree = "<group>"; };
+		6230581D20F36CCE00A9EE55 /* ITCFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITCFoundation.m; sourceTree = "<group>"; };
 		62AC4A3420DFEAF200C8AEBC /* ITObjcLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITObjcLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AC4A3720DFEAF300C8AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62AC4A3820DFEAF300C8AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				62AC4A7420DFEB3700C8AEBC /* ITAutoReleaseViewController.m */,
 				62B2C4FE20E36CF200F94B05 /* ITMutableArray.h */,
 				62B2C4FF20E36CF200F94B05 /* ITMutableArray.m */,
+				6230581C20F36CCE00A9EE55 /* ITCFoundation.h */,
+				6230581D20F36CCE00A9EE55 /* ITCFoundation.m */,
 			);
 			path = Memorys;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6230581E20F36CCE00A9EE55 /* ITCFoundation.m in Sources */,
 				62AC4A7820DFEB3700C8AEBC /* ITRetainCount.m in Sources */,
 				62B2C50020E36CF200F94B05 /* ITMutableArray.m in Sources */,
 				62AC4A7520DFEB3700C8AEBC /* ITARC.m in Sources */,
