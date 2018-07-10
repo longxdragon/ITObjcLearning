@@ -76,10 +76,6 @@ extern void _objc_autoreleasePoolPrint(void);
     NSLog(@"%@", o1);
 }
 
-/**
- o 出了作用域，强指针释放，内存被释放
- 访问野指针，报错
- */
 - (void)testAutorelease {
     NSObject *o = [NSObject new];
     

@@ -22,46 +22,57 @@ __weak id refrence = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 场景 1
-    // 返回的是 autorelease 对象
-    NSString *str = [NSString stringWithFormat:@"dragonxulong"];
-    NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)str));
-    refrence = str;
-    NSLog(@"%@", refrence);
-    // 出了作用域后，并不是立马释放
+//    // 场景 1
+//    // 返回的是 autorelease 对象
+//    NSString *str = [NSString stringWithFormat:@"dragonxulong"];
+//    refrence = str;
+//    NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)str));
+//    NSLog(@"%@", refrence);
+//    // 出了作用域后，并不是立马释放
     
-    // 场景 2
+    
+//    // 场景 2
 //    {
+//        // strong + autorelease -> retainCount = 2
 //        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
 //        refrence = str;
+//        NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)str));
+//        // 出了作用域，str 指针释放
 //    }
+//    // 由于 str 指向的内存依然被当前的 autoreleasePool 持有者，所以依然可以访问
 //    NSLog(@"%@", refrence);
     
     
-    // 场景 3
-    // 手动干预 autorelease 对象
-    // 等同于：
-    // void *context = objc_autoreleasePoolPush();
-    // {} 中的代码
-    // objc_autoreleasePoolPop(context);
-    //
-    // AutoreleasePoolPage 来管理:
-    // 双向链表
-    // 跟线程一一对应，保存着当前的线程对象
-    //
+//    // 场景 3
+//    // 手动干预 autorelease 对象
+//    // 等同于：
+//    // void *context = objc_autoreleasePoolPush();
+//    // {} 中的代码
+//    // objc_autoreleasePoolPop(context);
+//    //
+//    // AutoreleasePoolPage 来管理:
+//    // 双向链表
+//    // 跟线程一一对应，保存着当前的线程对象
+//    //
 //    @autoreleasepool {
 //        NSString *str = [NSString stringWithFormat:@"dragonxulong"];
 //        refrence = str;
+//        NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)str));
+//        // 出了作用域，str 指针释放，autoreleasePool 也会被清空, weak 指针也会被释放
 //    }
 //    NSLog(@"%@", refrence);
     
+    
     // 场景 4
-//        NSString *str2 = nil;
-//        @autoreleasepool {
-//            str2 = [NSString stringWithFormat:@"dragonxulong"];
-//            refrence = str2;
-//        }
-//        NSLog(@"%@", refrence);
+    NSString *str2 = nil;
+    @autoreleasepool {
+        str2 = [NSString stringWithFormat:@"dragonxulong"];
+        refrence = str2;
+        // 出了作用域，autoreleasePool 会被清空
+        // 由于依然有强引用指针指向，所有 refrence 指针依然存在
+    }
+    NSLog(@"%@", refrence);
+    // viewDidLoad 出了作用域，str2 强引用指针释放，refrence 也会被释放
 }
 
 - (void)viewWillAppear:(BOOL)animated {
