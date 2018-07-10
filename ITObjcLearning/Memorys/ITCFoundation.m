@@ -28,6 +28,15 @@
  1、__bridge
  2、__bridge_retained [ CFBridgingRetain()就是对__bridge_retained的宏定义 ]
  3、__bridge_transfer [ CFBridgingRelease()就是对__bridge_transfer的宏定义 ]
+ 
+ 补充：
+ NS_INLINE CF_RETURNS_RETAINED CFTypeRef _Nullable CFBridgingRetain(id _Nullable X) {
+    return (__bridge_retained CFTypeRef)X;
+ }
+ 
+ NS_INLINE id _Nullable CFBridgingRelease(CFTypeRef CF_CONSUMED _Nullable X) {
+    return (__bridge_transfer id)X;
+ }
  */
 @implementation ITCFoundation
 
@@ -97,7 +106,7 @@
         // 只剩 str1 强引用指针
     }
     NSLog(@"testBridgeTransfer - %ld", CFGetRetainCount((__bridge CFStringRef)str1));
-    NSLog(@"testBridgeTransfer - %@", str1);
+    NSLog(@"testBridgeTransfer - %@", str1);    
 }
 
 @end
