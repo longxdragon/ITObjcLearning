@@ -76,6 +76,7 @@
         [_list addObject:@{ @"name" : @"Autorelease without animation", @"class" : @"ITAutoReleaseViewController", @"nib" : @(YES), @"animate" : @(NO) }];
         [_list addObject:@{ @"name" : @"ITMutableArray", @"class" : @"ITMutableArray" }];
         [_list addObject:@{ @"name" : @"ITCFoundation", @"class" : @"ITCFoundation" }];
+        [_list addObject:@{ @"name" : @"ITWeak", @"class" : @"ITWeak" }];
     }
     return _list;
 }
